@@ -1,0 +1,778 @@
+/* -------------------------------- globall */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+/* main::after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+body {
+  margin: 0;
+  padding: 0;
+  color: #123524;
+  background-color: #fff5e4;
+  min-height: 200vh;
+  overflow: visible;
+  font-size: 18px;
+  line-height: 1.8;
+}
+header {
+  display: inline; /*biar nahan navbar*/
+}
+
+textarea {
+  background-color: #fff5e4;
+}
+abbr {
+  text-decoration: none !important;
+}
+
+/* -------------------------------- navbarr */
+nav {
+  background-color: #efe3c2;
+  padding: 17px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: visible !important;
+  /* height: 70px; */
+}
+nav ul {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+  gap: 0.5rem;
+  padding-right: 50px;
+}
+nav li {
+  list-style-type: none;
+  margin: 0;
+}
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #123524;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+nav a:hover {
+  /* font-weight: bold; */
+  background-color: #123524;
+  color: #efe3c2;
+}
+
+/* article#experience {
+  padding: 20px;
+} */
+
+/* -------------------------------- jumbotron */
+#profileYusuf {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+}
+.jumbotron {
+  position: relative;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 114px;
+  /* font-size: 20px; */
+  background-color: #123524;
+  text-align: center;
+  color: #efe3c2;
+}
+.textJumbotron {
+  padding: 20px;
+  /* margin: 30px; */
+}
+.textJumbotron p {
+  font-size: 22px;
+}
+.sosialLinks {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.sosialLinks i {
+  color: #fff5e4;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+.sosialLinks a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+.nama {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.nama h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
+.copyright {
+  font-size: small;
+}
+
+#content {
+  /* padding: 20px;
+    overflow: auto; */
+  flex: 3;
+}
+
+#aboutMe {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #123524;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row; /*kanan kiri*/
+  justify-content: space-between;
+  max-width: 1700px; /* batas */
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+#getToKnowMe {
+  flex: 2; /*kecil sempit, besar luas*/
+  margin-right: 0; /* jarak gtkm sama ms */
+  color: #123524;
+}
+
+.skills {
+  flex: 2; /* luwih cilik" */
+  color: #123524;
+}
+
+.skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-box span {
+  padding: 10px 20px;
+  background-color: #123524;
+  color: #efe3c2;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.skill-box span:hover {
+  background-color: #efe3c2;
+  color: #123524;
+  /* cursor: pointer; */
+  /* font-weight: bold; */
+}
+
+.experience h2 {
+  color: #123524;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  /* margin-bottom: 20px; */
+}
+
+.experience h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #123524;
+  /* margin-left: 180px; */
+}
+
+.experience h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  /* margin-bottom: 5px; */
+  color: #123524;
+  /* color: #fff5e4; */
+  /* margin-left: 180px; */
+}
+
+.experience p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #123524;
+  /* margin-left: 180px; */
+}
+
+#aboutMe h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* -------------------------programmer */
+.programmerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.textExperience1 {
+  flex: 2;
+  margin-right: 50px;
+}
+.imageExperience1 {
+  flex: 2;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.textImageExperience1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+
+  /* color: #efe3c2; */
+}
+.textImageExperience1 h4 {
+  color: #fff5e4;
+  margin: 0;
+  font-size: 16px;
+}
+.textImageExperience1 p {
+  color: #fff5e4;
+  font-size: 16px;
+}
+
+.shutterstockLink {
+  color: #123524;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.shutterstockLink:hover {
+  text-decoration: underline;
+}
+
+/* contact & form ----------------------*/
+aside {
+  flex: 1;
+  width: 300px;
+  /* float: right; */
+  /* margin: 20px; */
+  position: sticky;
+  top: 100px;
+  z-index: 100;
+  padding: 20px;
+  background-color: #123524;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* max-height: 600px;
+  overflow-y: auto; */
+  position: sticky; /*ben stuck nahan*/
+  /* top: 100px; */
+}
+input {
+  background-color: #fff5e4;
+}
+.contactHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  /* margin-bottom: 20px; */
+}
+.contactProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contactProfileText {
+  display: flex;
+  flex-direction: column;
+}
+.contactProfileText h2 {
+  color: #efe3c2;
+  margin: 0;
+  font-size: 18px;
+}
+
+.contactProfileText p {
+  color: #efe3c2;
+  margin: 0;
+  font-size: 14px;
+}
+
+.contactProfile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#contact {
+  /* border: #123524 solid 2px; */
+  color: #efe3c2;
+}
+.contactAwal {
+  text-align: center;
+}
+.contactAwal h2 {
+  margin-top: 30px;
+  /* margin-bottom: 10px; */
+  margin: 0;
+  font-size: 18px;
+}
+.contactAwal p {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 14px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  /* text-align: left; */
+}
+input,
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+textarea {
+  margin-bottom: 20px;
+}
+input:focus,
+textarea:focus {
+  outline: 1px solid #123524;
+  border-color: #123524;
+}
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #123524;
+  color: #efe3c2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: #efe3c2;
+  color: #123524;
+  font-weight: bold;
+}
+button[type="submit"]:hover {
+  background-color: #d4c9a8;
+  transform: translateY(-2px);
+}
+.formPertanyaan {
+  background-color: #fff5e4;
+  /* background-color: rgba(255, 245, 228, 0.9); */
+  padding: 20px;
+  /* padding-bottom: 50px; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* batas e*/
+  margin: 0 auto; /*biar form e ditengah*/
+}
+.formPertanyaan label {
+  color: #123524;
+  font-size: 16px;
+}
+/* end contact form --------------------*/
+
+.copyright {
+  font-size: 18px;
+}
+
+/* -------------------------------- experienceSection */
+.experienceContainer {
+  display: flex;
+  flex-direction: row; /* kanan kiri */
+  justify-content: space-between;
+  /* max-width: 800px; atur lebar */
+  /* margin: 0 auto; */
+  padding: 20px;
+  gap: 20px;
+}
+.contentExperience {
+  flex: 2;
+}
+.imageExperience {
+  flex: 2;
+}
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.container img {
+  vertical-align: middle;
+}
+.container .contentImg {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff5e4;
+  width: 100%;
+  padding: 10px;
+  /* margin: 0; */
+}
+.contentImg h3 {
+  margin: 0;
+  color: #fff5e4;
+}
+.contentImg p {
+  color: #fff5e4;
+}
+
+/* -------------------------------- dropdownSection */
+.dropdown {
+  position: relative;
+}
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  background-color: #fff5e4;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1002;
+  border-radius: 5px;
+  padding: 10px 0;
+  top: 100%;
+  left: 0;
+}
+.dropdownMenu li {
+  padding: 5px 10px;
+}
+.dropdownMenu a {
+  color: #123524;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+.dropdownMenu a.active {
+  background-color: #123524;
+  color: #fff5e4;
+  font-weight: bold;
+}
+/* footer */
+footer {
+  padding: 15px;
+  text-align: center;
+  /* font-weight: bold; */
+  background-color: #123524;
+  color: #efe3c2;
+  font-size: 14px;
+}
+hr {
+  background-color: #123524;
+  width: 30%;
+}
+footer h3 {
+  margin: 0;
+}
+footer p {
+  margin: 0;
+}
+.copyright {
+  font-size: 12px;
+}
+/* tablet ------------------------------*/
+@media screen and (max-width: 1023px) {
+  main {
+    flex-direction: column;
+  }
+  body {
+    font-size: 16px;
+  }
+  nav {
+    padding: 12px;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+    gap: 0.5rem;
+    padding-right: 50px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+  .jumbotron {
+    margin: 0;
+    padding: 50px;
+    font-size: 18px;
+  }
+  .sosialLinks i {
+    font-size: 25px;
+  }
+  #profileYusuf {
+    width: 300px;
+    height: 300px;
+  }
+  .about-container {
+    flex-direction: row; /*kanan kiri*/
+    justify-content: space-between;
+    max-width: 800px; /*atur lebar*/
+    margin: 0 auto;
+  }
+  #getToKnowMe {
+    flex: 2;
+    margin-right: 20px;
+  }
+  .skills {
+    flex: 1;
+  }
+  /* ------------------------------programmer */
+  .programmerContainer {
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+  }
+  .textExperience1 {
+    flex: 2;
+  }
+  .imageExperience1 {
+    flex: 2;
+    /* max-width: 600px; */
+    /* display: none; */
+  }
+  .textImageExperience1 {
+    display: none;
+  }
+
+  /* -------------------------------- experienceSection */
+  .experienceContainer {
+    flex-direction: column;
+  }
+
+  /* form---------------- */
+  aside {
+    width: fit-content;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    position: static;
+    background-color: #123524;
+    border-radius: 8px;
+  }
+  .contactProfile img {
+    width: 80%;
+    height: auto;
+    border-radius: 5%;
+  }
+  .contactHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .contactProfile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactProfileText {
+    text-align: center;
+  }
+  .contactProfileText p {
+    margin-bottom: 10px;
+  }
+  .formPertanyaan {
+    /* width: 80%; ngecilin lebar e */
+    /* padding: 10px; */
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .contactAwal {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .contactAwal h2 {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+  .contactAwal p {
+    /* margin: auto; */
+    margin: 0 auto 20px;
+    font-size: 16px;
+    max-width: 100%;
+    line-height: 1.6;
+  }
+  form {
+    width: 100%;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #123524;
+  }
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 12px;
+  }
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  /* form---------------- */
+}
+
+/* mobile -----------------------------*/
+@media screen and (max-width: 425px) {
+  main {
+    flex-direction: column;
+  }
+  body {
+    font-size: 14px;
+  }
+
+  nav ul {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+  .jumbotron {
+    margin: 0;
+    padding: 50px;
+    font-size: 15px;
+    padding-bottom: 30px;
+  }
+  .textJumbotron p {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+  /* h1.nama {
+    font-size: 30px !important;
+  } */
+  .nama {
+    font-size: 25px;
+  }
+  .sosialLinks i {
+    font-size: 22px;
+  }
+  #profileYusuf {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-container {
+    flex-direction: column; /*atas bawah*/
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #getToKnowMe {
+    margin-right: 0;
+  }
+
+  /* -------------------------------- experienceSection */
+  .contentImg {
+    display: none;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+  /* form---------------- */
+  aside {
+    width: 70%;
+    margin: 20px auto 0;
+    padding: 20px;
+    position: static;
+    background-color: #123524;
+    border-radius: 8px;
+  }
+  .formPertanyaan {
+    /* width: 80%; ngecilin lebar e */
+    /* padding: 10px; */
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .contactAwal {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contactAwal h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .contactAwal p {
+    /* margin: auto; */
+    margin: 0 auto 20px;
+    font-size: 14px;
+    max-width: 90%;
+    line-height: 1.6;
+  }
+  form {
+    width: 100%;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #123524;
+  }
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 12px;
+  }
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  /* form---------------- */
+}
